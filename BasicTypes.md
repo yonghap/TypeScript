@@ -33,6 +33,8 @@ let fruits: string[] = ['딸기','바나나','사과'];
 // 숫자 배열
 let numbers: Array<Number> = [1,2,3];
 let numbers: number[] = [3,2,1];
+// 읽기 전용 배열
+let arr: ReadonlyArray<number> = [1,2,3];
 ```
 
 ### 튜플 타입: tuple
@@ -78,6 +80,9 @@ enum fruits {
 	apple = 2,
 	orange
 }
+
+console.log(fruits["banana"]); // 0
+console.log(fruits["apple"]); // 2
 ```
 
 
@@ -91,6 +96,7 @@ enum Arrows {
 	LEFT = "LEFT",
 	RIGHT = "RIGHT"
 }
+console.log(Arrows["UP"]); // UP
 ```
 
 
