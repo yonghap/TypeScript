@@ -20,3 +20,17 @@ function getBirth(birth : number | string) {
 	return new TypeError('age muse be number of string');
 }
 ```
+
+### Intersection Type
+
+```
+interface Person {
+	name: string;
+	age: number;
+}
+interface Developer {
+	name: string;
+	skill: number;
+}
+type Capt = Person & Developer;
+```
