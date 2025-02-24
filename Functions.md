@@ -63,3 +63,16 @@ function sumb(a:number, b=100) : number {
 sum(1, undefined); // 101
 subm(1); // 101
 ```
+
+
+REST 문법도 활용이 가능합니다.
+
+```
+function sum(a: number, ...nums: number[]): number {
+	const totals = 0;
+	for (let key in nums) {
+		totals += nums[key];
+	}
+	return a + totals;
+}
+```

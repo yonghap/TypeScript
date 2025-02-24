@@ -21,7 +21,6 @@ let isMan: boolean = true;
 
 ```
 let areas: object = { name : "SEOUL", location : "KOR" }
-
 ```
 
 ### 배열 타입: Array
@@ -30,9 +29,11 @@ let areas: object = { name : "SEOUL", location : "KOR" }
 // 문자열 배열
 let fruits: Array<String> = ['사과','딸기','바나나'];
 let fruits: string[] = ['딸기','바나나','사과'];
+
 // 숫자 배열
 let numbers: Array<Number> = [1,2,3];
 let numbers: number[] = [3,2,1];
+
 // 읽기 전용 배열
 let arr: ReadonlyArray<number> = [1,2,3];
 ```
