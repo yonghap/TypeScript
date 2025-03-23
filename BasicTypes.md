@@ -100,7 +100,11 @@ enum Arrows {
 console.log(Arrows["UP"]); // UP
 ```
 
+### null, undefined
 
+null과 undefined도 정의 할 수 있습니다.
 
-
-
+```
+let empty: null = null;
+let nothing: undefined;
+```

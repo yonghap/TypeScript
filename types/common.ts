@@ -1,13 +1,17 @@
-import type { USER } from "./User";
+import { USER } from './User'
 
-function initPage () {
-	const user:USER.name = 'test';
-	const info:USER.UserInfo = {
-		name : 'test',
-		age : 123
+const customFetch = async (url : string) => {
+	try {
+		const response = await fetch(url);
+		return await response.json();
+	} catch (err) {
+		console.log(err)
 	}
-	console.log(user);
-	console.log(info);
 }
-// this is the starting point of your app
+const fetchUserDetail = async () => {
+	const data = (await customFetch('./dummy/user.json')) as USER.UserInfo
+}
+const initPage = () => {
+	fetchUserDetail();
+}
 initPage();
