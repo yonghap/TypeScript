@@ -1,4 +1,4 @@
-import { USER } from './User'
+import {USER} from './User'
 
 const customFetch = async (url : string) => {
 	try {
@@ -8,10 +8,39 @@ const customFetch = async (url : string) => {
 		console.log(err)
 	}
 }
-const fetchUserDetail = async () => {
-	const data = (await customFetch('./dummy/user.json')) as USER.UserInfo
+const fetchUserDetail = (id : number): Promise<USER.UserInfo> => {
+	return customFetch(`https://jsonplaceholder.typicode.com/users/${id}`);
 }
-const initPage = () => {
-	fetchUserDetail();
+const fetchUsers = (): Promise<USER.UserInfo[]> => {
+	return customFetch('https://jsonplaceholder.typicode.com/users');
+}
+const initPage = async () => {
+	const userData = await fetchUsers();
+	const userDetailData = await fetchUserDetail(1);
+	console.log('usersData ===', userData);
+	console.log('userData(1) ===', userDetailData);
+
+	// interface
+	interface User {
+		name : string,
+		age : number
+	}
+	const park : User = { name : 'park' , age : 33}
+
+
+	interface Jobs {
+		name : string;
+		money? : number;
+	}
+
+	interface Company extends Jobs {
+		company : string
+	}
+
+	var my : Company = {
+		name : '디자이너',
+		company : '구글',
+	}
+	console.log(my);
 }
 initPage();

@@ -18,10 +18,22 @@ const customFetch = (url) => __awaiter(void 0, void 0, void 0, function* () {
         console.log(err);
     }
 });
-const fetchUserDetail = () => __awaiter(void 0, void 0, void 0, function* () {
-    const data = (yield customFetch('./dummy/user.json'));
-});
-const initPage = () => {
-    fetchUserDetail();
+const fetchUserDetail = (id) => {
+    return customFetch(`https://jsonplaceholder.typicode.com/users/${id}`);
 };
+const fetchUsers = () => {
+    return customFetch('https://jsonplaceholder.typicode.com/users');
+};
+const initPage = () => __awaiter(void 0, void 0, void 0, function* () {
+    const userData = yield fetchUsers();
+    const userDetailData = yield fetchUserDetail(1);
+    console.log('usersData ===', userData);
+    console.log('userData(1) ===', userDetailData);
+    const park = { name: 'park', age: 33 };
+    var my = {
+        name: '디자이너',
+        company: '구글',
+    };
+    console.log(my);
+});
 initPage();

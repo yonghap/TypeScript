@@ -6,7 +6,7 @@ export namespace USER {
 		id : number
 		name : string
 		username : string
-		email : number
+		email : string
 		address : Address
 		phone : string
 		website : string | null
