@@ -65,3 +65,48 @@ var my : Company = {
 	company : '구글'
 }
 ```
+
+### 인터페이스 인덱싱
+
+인터페이스도 인덱싱 정의가 가능합니다.
+
+#### 배열 인덱싱
+
+```
+interface StringArray {
+	[index: number] : string
+}
+
+const Fruits = ['Banana','Apple','Orange']
+Fruits[1]; // Apple
+```
+일반 배열처럼 숫자 인덱스를 통해 접근할 수 있습니다.
+
+
+#### 객체 인덱싱
+
+객체의 키 값도 정의가 가능 합니다.
+
+```
+interface GameUser {
+	[level:string] : number;
+}
+
+var ng = {
+	easy : 100,
+	normal : 350,
+	hard : 50
+}
+```
+
+위처럼 객체의 키 이름은 명시하지 않고
+키의 타입과 키 값의 타입만 명시하는 문법을 인덱스 시그니처라고 합니다.
+아래 형태로도 가능합니다.
+
+```
+interface Person {
+	[another: string] : string
+	name : string;
+	age : number
+}
+```

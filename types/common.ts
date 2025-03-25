@@ -42,5 +42,36 @@ const initPage = async () => {
 		company : '구글',
 	}
 	console.log(my);
+
+
+	interface StringArray {
+		[index: number] : string
+	}
+
+	var sa:StringArray = ['LG','SS','SK']
+	console.log('StringArray' , sa[0])
+
+	interface GameUser {
+		[level:string] : number;
+	}
+
+	var ng:GameUser = {
+		easy : 100,
+		normal : 350,
+		hard : 50
+	}
+	console.log('ng',ng);
+
+	interface Person {
+		[property: string] : string
+		name : string;
+		age : number;
+	}
+
+	var ps:Person = {
+		name : 'park',
+		age : 123,
+		address : 'seoul',
+	}
 }
 initPage();

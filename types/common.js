@@ -35,5 +35,18 @@ const initPage = () => __awaiter(void 0, void 0, void 0, function* () {
         company: '구글',
     };
     console.log(my);
+    var sa = ['LG', 'SS', 'SK'];
+    console.log('StringArray', sa[0]);
+    var ng = {
+        easy: 100,
+        normal: 350,
+        hard: 50
+    };
+    console.log('ng', ng);
+    var ps = {
+        name: 'park',
+        age: 123,
+        address: 'seoul',
+    };
 });
 initPage();
