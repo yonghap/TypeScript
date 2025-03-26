@@ -1,7 +1,7 @@
-Union Type 이란 or 연산자를 의미합니다.
-
-
 ### Union Type
+
+Union Type은 JS에서 AND 연산자와 OR 연산자를 생각하면 이해하기 쉽습니다.
+
 
 ```
 function logText(text : string | number) {

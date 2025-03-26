@@ -63,15 +63,35 @@ const initPage = async () => {
 	console.log('ng',ng);
 
 	interface Person {
-		[property: string] : string
+		[property: string] : string | number
 		name : string;
 		age : number;
 	}
-
 	var ps:Person = {
 		name : 'park',
 		age : 123,
 		address : 'seoul',
 	}
+
 }
+interface cc {
+	id : number;
+	title : string
+}
+function getDatas(type: string): cc[] {
+	return [
+		{
+			id: 1,
+			title: 'TITLE 1'
+		},
+		{
+			id: 2,
+			title: 'TITLE 2'
+		}
+	];
+}
+
+const t = getDatas('1');
+console.log('tt',t);
+
 initPage();

@@ -76,3 +76,57 @@ function sum(a: number, ...nums: number[]): number {
 	return a + totals;
 }
 ```
+
+데이터 호출 결과값으로 객체 배열 데이터도 가능합니다.
+모두 같은 기능을 합니다.
+
+```
+function getDatas(type: string): {id: number, title: string}[] {
+	const contacts = [
+		{
+			id : 1,
+			title : 'TITLE 1'
+		},
+		{
+			id : 2,
+			title : 'TITLE 2'
+		}
+	]
+	return contacts;
+}
+```
+```
+function getDatas(type: string): Array<Object> {
+	const contacts = [
+		{
+			id : 1,
+			title : 'TITLE 1'
+		},
+		{
+			id : 2,
+			title : 'TITLE 2'
+		}
+	]
+	return contacts;
+}
+```
+```
+interface User {
+	id : number;
+	title : string
+}
+function getDatas(type: string): User[] {
+	const contacts = [
+		{
+			id : 1,
+			title : 'TITLE 1'
+		},
+		{
+			id : 2,
+			title : 'TITLE 2'
+		}
+	]
+	return contacts;
+}
+```
+ 

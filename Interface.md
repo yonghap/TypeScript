@@ -12,7 +12,7 @@ var marketer: Jobs = { name : '마케터', money : 1000 }
 var designer: Jobs = { name : '디자이너', money : 1000 }
 ```
 
-### 함수 파라미터 타입 정의
+### 함수내에서의 인터페이스
 
 ```
 interface Jobs {
@@ -66,7 +66,7 @@ var my : Company = {
 }
 ```
 
-### 인터페이스 인덱싱
+#### 인터페이스 인덱싱
 
 인터페이스도 인덱싱 정의가 가능합니다.
 
@@ -105,7 +105,7 @@ var ng = {
 
 ```
 interface Person {
-	[another: string] : string
+	[another: string] : string | number
 	name : string;
 	age : number
 }

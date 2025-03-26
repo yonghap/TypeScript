@@ -49,4 +49,18 @@ const initPage = () => __awaiter(void 0, void 0, void 0, function* () {
         address: 'seoul',
     };
 });
+function getDatas(type) {
+    return [
+        {
+            id: 1,
+            title: 'TITLE 1'
+        },
+        {
+            id: 2,
+            title: 'TITLE 2'
+        }
+    ];
+}
+const t = getDatas('1');
+console.log('tt', t);
 initPage();
