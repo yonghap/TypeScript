@@ -53,7 +53,9 @@ sum(1); // error
 sum(1,2); // 3 
 ```
 
+
 매개변수 초기화는 js문법과 같습니다.
+
 
 ```
 function sumb(a:number, b=100) : number {
@@ -78,6 +80,7 @@ function sum(a: number, ...nums: number[]): number {
 ```
 
 데이터 호출 결과값으로 객체 배열 데이터도 가능합니다.
+
 모두 같은 기능을 합니다.
 
 ```

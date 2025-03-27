@@ -27,22 +27,17 @@ const fetchUsers = () => {
 const initPage = () => __awaiter(void 0, void 0, void 0, function* () {
     const userData = yield fetchUsers();
     const userDetailData = yield fetchUserDetail(1);
-    console.log('usersData ===', userData);
-    console.log('userData(1) ===', userDetailData);
     const park = { name: 'park', age: 33 };
     var my = {
         name: '디자이너',
         company: '구글',
     };
-    console.log(my);
     var sa = ['LG', 'SS', 'SK'];
-    console.log('StringArray', sa[0]);
     var ng = {
         easy: 100,
         normal: 350,
         hard: 50
     };
-    console.log('ng', ng);
     var ps = {
         name: 'park',
         age: 123,
@@ -62,5 +57,24 @@ function getDatas(type) {
     ];
 }
 const t = getDatas('1');
-console.log('tt', t);
+// console.log('tt',t);
 initPage();
+var Shoes;
+(function (Shoes) {
+    Shoes[Shoes["Nike"] = 0] = "Nike";
+    Shoes[Shoes["Adidas"] = 1] = "Adidas";
+    Shoes[Shoes["NewBalance"] = 2] = "NewBalance";
+})(Shoes || (Shoes = {}));
+var feel;
+(function (feel) {
+    feel["Good"] = "\uC88B\uC74C";
+    feel["Bad"] = "\uB098\uC068";
+})(feel || (feel = {}));
+const fl = {
+    feel: feel.Good
+};
+var myShoes = Shoes[0];
+console.log('msss', myShoes);
+console.log('msss', fl);
+var mma = "\uC88B\uC74C" /* ttt.Good */;
+console.log(mma);

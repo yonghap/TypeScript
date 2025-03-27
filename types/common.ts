@@ -17,8 +17,8 @@ const fetchUsers = (): Promise<USER.UserInfo[]> => {
 const initPage = async () => {
 	const userData = await fetchUsers();
 	const userDetailData = await fetchUserDetail(1);
-	console.log('usersData ===', userData);
-	console.log('userData(1) ===', userDetailData);
+	// console.log('usersData ===', userData);
+	// console.log('userData(1) ===', userDetailData);
 
 	// interface
 	interface User {
@@ -41,7 +41,7 @@ const initPage = async () => {
 		name : '디자이너',
 		company : '구글',
 	}
-	console.log(my);
+	// console.log(my);
 
 
 	interface StringArray {
@@ -49,7 +49,7 @@ const initPage = async () => {
 	}
 
 	var sa:StringArray = ['LG','SS','SK']
-	console.log('StringArray' , sa[0])
+	// console.log('StringArray' , sa[0])
 
 	interface GameUser {
 		[level:string] : number;
@@ -60,7 +60,7 @@ const initPage = async () => {
 		normal : 350,
 		hard : 50
 	}
-	console.log('ng',ng);
+	// console.log('ng',ng);
 
 	interface Person {
 		[property: string] : string | number
@@ -92,6 +92,34 @@ function getDatas(type: string): cc[] {
 }
 
 const t = getDatas('1');
-console.log('tt',t);
+// console.log('tt',t);
 
 initPage();
+
+enum Shoes {
+	Nike,
+	Adidas,
+	NewBalance
+}
+
+enum feel {
+	Good = '좋음',
+	Bad = '나쁨'
+}
+
+const fl = {
+	feel : feel.Good
+}
+
+var myShoes = Shoes[0]
+
+console.log('msss',myShoes)
+console.log('msss',fl)
+
+const enum ttt {
+	Good = '좋음',
+	Bad = '나쁨'
+}
+
+var mma = ttt.Good;
+console.log(mma)
