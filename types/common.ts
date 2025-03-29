@@ -123,3 +123,10 @@ const enum ttt {
 
 var mma = ttt.Good;
 console.log(mma)
+
+function getText<T>(text: T) : T {
+	return text;
+}
+
+var gt = getText<string>('Hello');
+console.log('gt',gt);

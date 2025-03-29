@@ -78,3 +78,8 @@ console.log('msss', myShoes);
 console.log('msss', fl);
 var mma = "\uC88B\uC74C" /* ttt.Good */;
 console.log(mma);
+function getText(text) {
+    return text;
+}
+var gt = getText('Hello');
+console.log('gt', gt);
