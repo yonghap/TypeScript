@@ -81,5 +81,19 @@ console.log(mma);
 function getText(text) {
     return text;
 }
-var gt = getText('Hello');
+const gt = getText('Hello');
 console.log('gt', gt);
+var product = 'pp1';
+var stock = 123;
+var address = {
+    city: 'seoul',
+    zinCode: 'ZZZ',
+    selected: false
+};
+function getOf(value) {
+    console.log(value);
+}
+getOf({
+    name: 'park',
+    num: 123
+});

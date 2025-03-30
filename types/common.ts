@@ -128,5 +128,27 @@ function getText<T>(text: T) : T {
 	return text;
 }
 
-var gt = getText<string>('Hello');
+const gt = getText<string>('Hello');
 console.log('gt',gt);
+
+interface Dropdown<T> {
+	value: T,
+	selected: boolean
+}
+
+var product: Dropdown<string> = 'pp1';
+var stock: Dropdown<number> = 123;
+var address: Dropdown<{ city: string, zipCode : string}> = {
+	city: 'seoul',
+	zinCode : 'ZZZ',
+	selected : false
+};
+
+function getOf<T extends keyof { name: string, num: number }>(value: T) {
+	console.log(value);
+}
+
+getOf({
+	name : 'park',
+	num : 123
+})
