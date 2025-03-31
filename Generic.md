@@ -10,8 +10,8 @@ function getText<T>(text: T) : T {
 getText<string>('Hello');	
 ```
 
-T로 선언된 부분이 모두 string으로 치환됩니다.
-제네릭 타입을 string으로 지정하였기 때문에 코드 작성시에도 string으로 추론합니다.
+T로 선언된 부분이 모두 string으로 치환됩니다.   
+제네릭 타입을 string으로 지정하였기 때문에 코드 작성시에도 string으로 추론합니다.   
 추론을 통해 string과 관련된 메소드의 안내를 받을 수 있습니다.
 
 ```
@@ -42,8 +42,8 @@ function getNumber(num: number): number {
 }
 ```
 
-위 함수는 매개변수로 받은 값을 그대로 리턴합니다.
-기능은 동일하지만 타입이 달라 함수를 두 번 정의했습니다.
+위 함수는 매개변수로 받은 값을 그대로 리턴합니다.   
+기능은 동일하지만 타입이 달라 함수를 두 번 정의했습니다.   
 물론 any를 사용해도 되지만 any를 사용할 경우 타입스크립트를 사용하는 의미가 없어집니다.
 
 
@@ -65,7 +65,7 @@ var stock: Dropdown<number> = {
 }
 ```
 
-### 인터페이스의 확장
+### extends
 
 제네릭을 통해 특정 타입만 받고 싶을 때는 extends를 사용합니다.
 
@@ -80,7 +80,20 @@ function withLength<T extends { length: number }>(value: T) {
 }
 ```
 
-keyof를 활용해 타입 제약도 가능합니다.
+### keyof
+
+keyof를 활용해 타입 제약도 가능합니다.   
+keyof는 특정 타입의 키 값을 추출해서 문자열 유니업 타입으로 변환해 줍니다.
+
+```
+type DeveloperKeys = keyof { name: string, skill: string }
+const firstColumn: DeveloperKeys = "name"
+
+function printKeys<T extends keyof { name:string; skill: string;}>(value: T) {
+	console.log(value);
+}
+printKeys('name');
+```
 
 ```
 function getKeyOf<T extends keyof { name: string, num: number }>(value: T) {
@@ -113,7 +126,7 @@ printText<number>([100]); // 1
 printText([true,false]); // 2
 ```
 
-함수 매개변수 제네릭에 []을 붙여줘도 됩니다.
-이때는 배열 형태의 데이터를 넣어야 됩니다.
+함수 매개변수 제네릭에 []을 붙여줘도 됩니다.   
+이때는 배열 형태의 데이터를 넣어야 됩니다.   
 printText([true,false])에 boolean 타입이 선언되지는 않았지만
 타입과 맞게 연결되어 있으면 선언되어 있는것처럼 동작 합니다.

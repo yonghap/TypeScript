@@ -144,6 +144,7 @@ var address: Dropdown<{ city: string, zipCode : string}> = {
 	selected : false
 };
 
+
 function getOf<T extends keyof { name: string, num: number }>(value: T) {
 	console.log(value);
 }
